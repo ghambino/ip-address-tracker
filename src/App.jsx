@@ -10,7 +10,7 @@ function App() {
 
   const apikey = import.meta.env.VITE_GEOINFO_API_KEY;
   const baseUrl = "https://geo.ipify.org/api/v2";
-  console.log(apikey);
+  // console.log(apikey);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

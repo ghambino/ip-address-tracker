@@ -73,3 +73,45 @@ span {
     height: 70vh;
     width: 100vw;
 }
+
+@media screen and (max-width: 325px) {
+    .title {
+       font-size: 26px
+    }   
+    .inp {
+       width: 80%;
+       font-size: 11px;
+    }
+    .user-info {
+        /* background-color: white;
+        width: 70%;
+        display: flex;
+        padding: 2rem 2.5rem;
+        justify-content: space-between;
+        border: 2px solid hsl(0, 0%, 59%);
+        position: absolute;
+        top: -45px;
+        left: 170px;
+        border-radius: 15px;
+        z-index: 9999; */
+        flex-direction: column;
+        left: 30px;
+        width: 80%;
+        padding: 1rem;
+        justify-content: center;
+    }
+    span {
+        font-size: 11px;
+    }
+    .detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        margin-bottom: .5rem;
+    }
+    h3 {
+        font-size: 13px;
+    }
+}
