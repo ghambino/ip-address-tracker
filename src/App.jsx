@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 // import TrackerInfo from "./components/TrackerInfo";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 
 function App() {
   const [geoTrackingInfo, setGeoTrackingInfo] = useState(null);
@@ -47,6 +47,13 @@ function App() {
   }, []);
 
   console.log(geoTrackingInfo);
+
+  function ChangeMapView({ coords }) {
+    const map = useMap();
+    map.setView(coords, map.getZoom());
+
+    return null;
+  }
 
   return (
     <div>
@@ -116,6 +123,12 @@ function App() {
                   my present location. <br /> let get hooked up.
                 </Popup>
               </Marker>
+              <ChangeMapView
+                coords={[
+                  geoTrackingInfo.location.lat,
+                  geoTrackingInfo.location.lng,
+                ]}
+              />
             </MapContainer>
           </div>
         </div>
